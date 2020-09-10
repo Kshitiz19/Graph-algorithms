@@ -19,7 +19,6 @@
 #include <time.h>
 using namespace std;
 
-typedef pair<int, int> iPair;
 
 vector< vector<iPair> > Adj;
 set < int > sources;
@@ -27,6 +26,7 @@ float *Centrality;
 int V, E, W;
 iPair **nodes; 
 int *ref;
+typedef pair<int, int> iPair;
 
 //Read and store source Vertices
 void readSource(char *file)
