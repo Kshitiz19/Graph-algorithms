@@ -10,7 +10,7 @@ int *finish ;
 int *color;
 int *low;
 char *articulation;
-vector <pair <int,int> > dump;
+std::vector <std::pair <int,int> > dump;
 
 void BCC(vector <vector <int> > &graph, int node)
 {
