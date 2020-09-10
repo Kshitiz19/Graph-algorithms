@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <stack>
-using namespace std;
+// using namespace std;
 
 int timer = 0;
 int *discover, *parent;
@@ -9,9 +9,9 @@ int *finish ;
 int *color;
 int *low;
 char *articulation;
-vector <pair <int,int> > dump;
+std::vector <std::pair <int,int> > dump;
 
-void BCC(vector <vector <int> > &graph, int node)
+void BCC(std::vector <std::vector <int> > &graph, int node)
 {
 	timer++;
 	discover[node] = timer;
@@ -54,14 +54,14 @@ void BCC(vector <vector <int> > &graph, int node)
 int main() {
 
 	int V, E, a, b;
-	vector <vector <int> > graph;
+	std::vector <std::vector <int> > graph;
 	cin >> V >> E;
 	graph.resize(V+1);
-	printf("V=%d and E=%d\n",V, E);
+	std::printf("V=%d and E=%d\n",V, E);
 
 	while(E--)
 	{
-		cin >> a >> b;
+		std::cin >> a >> b;
 		if(a==b) continue;
 		graph[a].push_back(b);
 		graph[b].push_back(a);
